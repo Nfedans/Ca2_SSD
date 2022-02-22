@@ -1,6 +1,6 @@
 <!-- the head section -->
 <head>
-<title>Origami Tutorials</title>
+<title>Online Origami Tutorials</title>
 <link rel="stylesheet" type="text/css" href="main.css">
 </head>
 
