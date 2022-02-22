@@ -1,7 +1,7 @@
 <?php
-    $dsn = 'mysql:host=localhost;dbname=shop-images';
-    $username = 'root';
-    $password = 'root';
+    $dsn = 'mysql:host=localhost;dbname=SSD_DB';
+    $username = 'phpuser';
+    $password = 'dblog';
 
     try {
         $db = new PDO($dsn, $username, $password);
