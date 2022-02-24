@@ -1,0 +1,34 @@
+/* Header styles*/
+header {
+  margin: 0;
+  border-bottom: 2px solid black1;
+}
+
+header h1 {
+  margin: 0;
+  padding: .5em 0;
+  color: blue1;
+}
+
+/* Footer styles*/
+footer {
+  clear: both;
+  margin-top: 1em;
+  border-top: 2px solid black;
+}
+
+footer p {
+  text-align: right;
+  font-size: 80%;
+  margin: 1em 0;
+}
+
+/* body styles*/
+body {
+  margin: 0;
+  padding: .5em 0;
+  color: black;
+}
+
+/* variables*/
+/*# sourceMappingURL=mainStyles.css.map */
