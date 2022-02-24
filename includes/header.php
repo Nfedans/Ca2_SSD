@@ -1,7 +1,7 @@
 <!-- the head section -->
 <head>
 <title>Online Origami Tutorials</title>
-<link rel="stylesheet" type="text/css" href="main.css">
+<link rel="stylesheet" type="text/css" href="../styling/mainStyles.css">
 </head>
 
 <!-- the body section -->
