@@ -3,11 +3,12 @@
 // Get the product data
 $creation_id = filter_input(INPUT_POST, 'creation_id', FILTER_VALIDATE_INT);
 $name = filter_input(INPUT_POST, 'name');
-$difficultyLvl = filter_input(INPUT_POST, 'difficulty', FILTER_VALIDATE_INT);
+$difficulty = filter_input(INPUT_POST, 'difficulty', FILTER_VALIDATE_INT);
+$description = filter_input(INPUT_POST, 'description');
 
 // Validate inputs
 if ($creation_id == null || $creation_id == false ||
-    $name == null || $difficultyLvl == null || $difficultyLvl == false ) {
+    $name == null || $difficulty == null || $description == null ) {
     $error = "Invalid product data. Check all fields and try again.";
     include('error.php');
     exit();
@@ -63,13 +64,14 @@ if ($creation_id == null || $creation_id == false ||
 
     // Add the product to the database 
     $query = "INSERT INTO records
-                 (categoryID, name, difficultyLvl, image)
+                 (creationID, name, description, difficulty, image)
               VALUES
-                 (:category_id, :name, :difficultyLvl, :image)";
+                 (:creation_id, :name, :description, :difficulty, :image)";
     $statement = $db->prepare($query);
     $statement->bindValue(':creation_id', $creation_id);
     $statement->bindValue(':name', $name);
-    $statement->bindValue(':difficultyLvl', $difficultyLvl);
+    $statement->bindValue(':description', $description);
+    $statement->bindValue(':difficulty', $difficulty);
     $statement->bindValue(':image', $image);
     $statement->execute();
     $statement->closeCursor();

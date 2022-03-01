@@ -5,7 +5,7 @@ $query = 'SELECT *
           ORDER BY creationID';
 $statement = $db->prepare($query);
 $statement->execute();
-$categories = $statement->fetchAll();
+$creations = $statement->fetchAll();
 $statement->closeCursor();
 ?>
 <!-- the head section -->
@@ -29,6 +29,10 @@ include('includes/header.php');
             <label>Name:</label>
             <input type="input" name="name" required>
             <br>
+
+            <label>Description:</label>
+            <input type="input" name="description" placeholder="Thorough explaination here...">
+            <br>       
 
             <label>Difficulty:</label>
             <input type="input" name="difficulty" placeholder="0 - 5" pattern="[0-5]">
