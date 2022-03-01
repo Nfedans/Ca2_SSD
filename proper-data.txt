@@ -12,7 +12,7 @@ CREATE TABLE `creations` (
 -- Dumping data for table `creations`
 --
 
-INSERT INTO `creations` (`categoryName`) VALUES
+INSERT INTO `creations` (`creationName`) VALUES
 ('Basic Airplane'),
 ('Boat'),
 ('Frog');
@@ -37,7 +37,7 @@ CREATE TABLE `records` (
 INSERT INTO `records` (`recordID`, `creationID`, `name`, `description`, `difficulty`, `image`) VALUES
 (1, 1, 'Fold page in half','Fold an a4 page in half length wise as shown in the image', '1', ''),
 (2, 1, 'Open the page and fold the corners','Fold the top corners so that the edge matches the centre crease', '1', ''),
-(3, 1, 'Repeat the last step with the other corner','Fold the other corner to the centre crease, you'll now have a 45 90 angle', '1', ''),
+(3, 1, 'Repeat the last step with the other corner','Fold the other corner to the centre crease, youll now have a 45 90 angle', '1', ''),
 (4, 1, 'fold the tip down','Fold down the tip, touch it to the 2 angles and press down', '2', ''),
 (5, 1, 'fold in half and fold the corner to make a wing','Fold in half along centre crease, then fold down as shown in the picture to create a wing ', '2', ''),
 (6, 1, 'flip and repeat','flip over the page, and fold the second wing as shown below ', '2', ''),
@@ -51,8 +51,6 @@ INSERT INTO `records` (`recordID`, `creationID`, `name`, `description`, `difficu
 (13, 2, 'Pull sides apart and flatten','Make the fold as in the image', '1', ''),
 (14, 2, 'Pull top flaps outward','Pull the top flaps out and squish down', '3', ''),
 (15, 2, 'Done','Congratulations, you now have a boat, have fun floating it ', '0', ''),
-
-
 (16, 3, 'Fold page in half diagonally','Fold square page in half diagonally as shown in the image', '1', ''),
 (17, 3, 'Fold page in half','Fold in half from corner to corner', '1', ''),
 (18, 3, 'Fold down the ears','Fold both ears down as in the imge', '2', ''),

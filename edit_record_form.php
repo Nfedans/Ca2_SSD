@@ -23,9 +23,9 @@ include('includes/header.php');
             <input type="hidden" name="record_id"
                    value="<?php echo $records['recordID']; ?>">
 
-            <label>Category ID:</label>
-            <input type="category_id" name="category_id"
-                   value="<?php echo $records['categoryID']; ?>">
+            <label>creation ID:</label>
+            <input type="creation_id" name="creation_id"
+                   value="<?php echo $records['creationID']; ?>">
             <br>
 
             <label>Name:</label>
@@ -33,9 +33,9 @@ include('includes/header.php');
                    value="<?php echo $records['name']; ?>">
             <br>
 
-            <label>List Price:</label>
-            <input type="input" name="price"
-                   value="<?php echo $records['price']; ?>">
+            <label>Difficulty:</label>
+            <input type="input" name="diffficulty"
+                   value="<?php echo $records['difficulty']; ?>">
             <br>
 
             <label>Image:</label>

@@ -2,38 +2,38 @@
 require_once('database.php');
 
 // Get category ID
-if (!isset($category_id)) {
-$category_id = filter_input(INPUT_GET, 'category_id', 
+if (!isset($creation_id)) {
+$creation_id = filter_input(INPUT_GET, 'creation_id', 
 FILTER_VALIDATE_INT);
-if ($category_id == NULL || $category_id == FALSE) {
-$category_id = 1;
+if ($creation_id == NULL || $creation_id == FALSE) {
+$creation_id = 1;
 }
 }
 
 // Get name for current category
-$queryCategory = "SELECT * FROM categories
-WHERE categoryID = :category_id";
-$statement1 = $db->prepare($queryCategory);
-$statement1->bindValue(':category_id', $category_id);
+$queryCreation = "SELECT * FROM creations
+WHERE creationID = :creation_id";
+$statement1 = $db->prepare($queryCreation);
+$statement1->bindValue(':creation_id', $creation_id);
 $statement1->execute();
-$category = $statement1->fetch();
+$creation = $statement1->fetch();
 $statement1->closeCursor();
-$category_name = $category['categoryName'];
+$creation_name = $creation['creationName'];
 
 // Get all categories
-$queryAllCategories = 'SELECT * FROM categories
-ORDER BY categoryID';
-$statement2 = $db->prepare($queryAllCategories);
+$queryAllCreations = 'SELECT * FROM creations
+ORDER BY creationID';
+$statement2 = $db->prepare($queryAllCreations);
 $statement2->execute();
-$categories = $statement2->fetchAll();
+$creations = $statement2->fetchAll();
 $statement2->closeCursor();
 
 // Get records for selected category
 $queryRecords = "SELECT * FROM records
-WHERE categoryID = :category_id
+WHERE creationID = :creation_id
 ORDER BY recordID";
 $statement3 = $db->prepare($queryRecords);
-$statement3->bindValue(':category_id', $category_id);
+$statement3->bindValue(':creation_id', $creation_id);
 $statement3->execute();
 $records = $statement3->fetchAll();
 $statement3->closeCursor();
@@ -42,16 +42,15 @@ $statement3->closeCursor();
 <?php
 include('includes/header.php');
 ?>
-<h1>Record List</h1>
 
 <aside>
 <!-- display a list of categories -->
 <h2>Selection of creations</h2>
 <nav>
 <ul>
-<?php foreach ($categories as $category) : ?>
-<li><a href=".?category_id=<?php echo $category['categoryID']; ?>">
-<?php echo $category['categoryName']; ?>
+<?php foreach ($creations as $creation) : ?>
+<li><a href=".?creation_id=<?php echo $creation['creationID']; ?>">
+<?php echo $creation['creationName']; ?>
 </a>
 </li>
 <?php endforeach; ?>
@@ -61,12 +60,13 @@ include('includes/header.php');
 
 <section>
 <!-- display a table of records -->
-<h2><?php echo $category_name; ?></h2>
+<h2><?php echo $creation_name; ?></h2>
 <table>
 <tr>
 <th>Image</th>
 <th>Name</th>
-<th>Price</th>
+<th>Description</th>
+<th>Difficulty</th>
 <th>Delete</th>
 <th>Edit</th>
 </tr>
@@ -74,21 +74,22 @@ include('includes/header.php');
 <tr>
 <td><img src="image_uploads/<?php echo $record['image']; ?>" width="100px" height="100px" /></td>
 <td><?php echo $record['name']; ?></td>
-<td class="right"><?php echo $record['price']; ?></td>
+<td><?php echo $record['description']; ?></td>
+<td class="right"><?php echo $record['difficulty']; ?></td>
 <td><form action="delete_record.php" method="post"
 id="delete_record_form">
 <input type="hidden" name="record_id"
 value="<?php echo $record['recordID']; ?>">
-<input type="hidden" name="category_id"
-value="<?php echo $record['categoryID']; ?>">
+<input type="hidden" name="creation_id"
+value="<?php echo $record['creationID']; ?>">
 <input type="submit" value="Delete">
 </form></td>
 <td><form action="edit_record_form.php" method="post"
 id="delete_record_form">
 <input type="hidden" name="record_id"
 value="<?php echo $record['recordID']; ?>">
-<input type="hidden" name="category_id"
-value="<?php echo $record['categoryID']; ?>">
+<input type="hidden" name="creation_id"
+value="<?php echo $record['creationID']; ?>">
 <input type="submit" value="Edit">
 </form></td>
 </tr>

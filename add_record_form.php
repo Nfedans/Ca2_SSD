@@ -1,8 +1,8 @@
 <?php
 require('database.php');
 $query = 'SELECT *
-          FROM categories
-          ORDER BY categoryID';
+          FROM creations
+          ORDER BY creationID';
 $statement = $db->prepare($query);
 $statement->execute();
 $categories = $statement->fetchAll();
@@ -17,11 +17,11 @@ include('includes/header.php');
         <form action="add_record.php" method="post" enctype="multipart/form-data"
               id="add_record_form">
 
-            <label>Category:</label>
-            <select name="category_id">
-            <?php foreach ($categories as $category) : ?>
-                <option value="<?php echo $category['categoryID']; ?>">
-                    <?php echo $category['categoryName']; ?>
+            <label>Creation:</label>
+            <select name="creation_id">
+            <?php foreach ($creations as $creation) : ?>
+                <option value="<?php echo $creation['creationID']; ?>">
+                    <?php echo $creation['creationName']; ?>
                 </option>
             <?php endforeach; ?>
             </select>
@@ -30,8 +30,8 @@ include('includes/header.php');
             <input type="input" name="name" required>
             <br>
 
-            <label>List Price:</label>
-            <input type="input" name="price" placeholder="$1 - $9" pattern="[1-9]">
+            <label>Difficulty:</label>
+            <input type="input" name="difficulty" placeholder="0 - 5" pattern="[0-5]">
             <br>        
             
             <label>Image:</label>
