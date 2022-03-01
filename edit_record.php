@@ -4,12 +4,13 @@
 $record_id = filter_input(INPUT_POST, 'record_id', FILTER_VALIDATE_INT);
 $creation_id = filter_input(INPUT_POST, 'creation_id', FILTER_VALIDATE_INT);
 $name = filter_input(INPUT_POST, 'name');
-$difficultyLvl = filter_input(INPUT_POST, 'difficultyLvl', FILTER_VALIDATE_INT);
+$difficulty = filter_input(INPUT_POST, 'difficulty', FILTER_VALIDATE_INT);
+$description = filter_input(INPUT_POST, 'description');
 
 // Validate inputs
 if ($record_id == NULL || $record_id == FALSE || $creation_id == NULL ||
 $creation_id == FALSE || empty($name) ||
-$difficultyLvl == NULL || $difficultyLvl == FALSE) {
+$difficulty == NULL || $difficulty == FALSE || $description == NULL) {
 $error = "Invalid record data. Check all fields and try again.";
 include('error.php');
 } else {
@@ -51,13 +52,15 @@ require_once('database.php');
 $query = 'UPDATE records
 SET creationID = :creation_id,
 name = :name,
-difficultyLvl = :difficultyLvl,
+description = :description,
+difficulty = :difficulty,
 image = :image
 WHERE recordID = :record_id';
 $statement = $db->prepare($query);
 $statement->bindValue(':creation_id', $creation_id);
 $statement->bindValue(':name', $name);
-$statement->bindValue(':difficultyLvl', $difficultyLvl);
+$statement->bindValue(':description', $description);
+$statement->bindValue(':difficulty', $difficulty);
 $statement->bindValue(':image', $image);
 $statement->bindValue(':record_id', $record_id);
 $statement->execute();

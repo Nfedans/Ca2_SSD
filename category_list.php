@@ -6,7 +6,7 @@
               ORDER BY creationID';
     $statement = $db->prepare($query);
     $statement->execute();
-    $categories = $statement->fetchAll();
+    $creations = $statement->fetchAll();
     $statement->closeCursor();
 ?>
 <!-- the head section -->

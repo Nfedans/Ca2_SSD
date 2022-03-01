@@ -33,8 +33,13 @@ include('includes/header.php');
                    value="<?php echo $records['name']; ?>">
             <br>
 
+            <label>Description:</label>
+            <input type="input" name="description"
+                   value="<?php echo $records['description']; ?>">
+            <br>
+
             <label>Difficulty:</label>
-            <input type="input" name="diffficulty"
+            <input type="input" name="difficulty"
                    value="<?php echo $records['difficulty']; ?>">
             <br>
 
