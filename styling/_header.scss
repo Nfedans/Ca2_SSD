@@ -9,3 +9,11 @@ header h1 {
     padding: .5em 0;
     color: $blue1;
 }
+
+// have atleast 2 nested yokes for the project
+
+header {
+    h1{
+        border: 1px solid white;
+    }
+}
