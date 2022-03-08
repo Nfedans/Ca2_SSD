@@ -1,5 +1,4 @@
-Inline-style: 
-![alt text](https://github.com/Nfedans/Ca2_SSD/blob/main/image_uploads/378336.png "Site Logo")
+![alt text](https://github.com/Nfedans/Ca2_SSD/blob/main/image_uploads/378572.png "Site Logo")
 
 
 # Origami website
