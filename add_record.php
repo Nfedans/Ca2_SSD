@@ -8,7 +8,7 @@ $description = filter_input(INPUT_POST, 'description');
 
 // Validate inputs
 if ($creation_id == null || $creation_id == false ||
-    $name == null || $difficulty == null || $description == null ) {
+    $name == null ||/* $difficulty == null ||*/ $description == null ) {
     $error = "Invalid product data. Check all fields and try again.";
     include('error.php');
     exit();
@@ -78,4 +78,5 @@ if ($creation_id == null || $creation_id == false ||
 
     // Display the Product List page
     include('index.php');
+
 }

@@ -1,5 +1,8 @@
 <?php
+//header('Location: ' . 'http://localhost/Ca2_SSD/index.php', true, 303);
+//exit;
 require('database.php');
+
 $query = 'SELECT *
           FROM creations
           ORDER BY creationID';
@@ -43,7 +46,7 @@ include('includes/header.php');
             <br>
             
             <label>&nbsp;</label>
-            <input type="submit" value="Add Record">
+            <input type="submit" value="Add Record" href="index.php" >
             <br>
         </form>
         <p><a href="index.php">View Homepage</a></p>
