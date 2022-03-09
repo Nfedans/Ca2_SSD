@@ -13,9 +13,16 @@ $statement->closeCursor();
 ?>
 <!-- the head section -->
  <div class="container">
+ <div id="left_section">
 <?php
 include('includes/header.php');
 ?>
+
+<?php
+include('sideComp.php');
+?>
+
+<div id="edit_form">
         <h1>Edit Product</h1>
         <form action="edit_record.php" method="post" enctype="multipart/form-data"
               id="add_record_form">
@@ -55,6 +62,4 @@ include('includes/header.php');
             <br>
         </form>
         <p><a href="index.php">View Homepage</a></p>
-    <?php
-include('includes/footer.php');
-?>
+            </div>

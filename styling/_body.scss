@@ -2,6 +2,116 @@
 
 body{
     margin: 0;
-    padding: .5em 0;
-    color: blue;
+    padding: 0;
+    color: #931D1E;
+    background-color: white;
+    width: 100vw;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
+
+.container{
+    display: flex;
+}
+
+div #left_section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    height: 100vh;
+    background-color: rgb(236, 243, 253);
+    border-right: 2px double #50B4C2;
+}
+div #section_holder
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1vh;
+    background-color: transparent;
+    height: 85vh;
+}
+
+section{
+   
+    margin-left: 40vw;
+    width: 60vw;
+    
+}
+
+aside{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
+    width: 32vw;
+    border: 2px solid #931D1E;
+    border-radius: 20px;
+    margin-top: 2vh;
+}
+
+div #info_section
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #ffffff;
+    width: 32vw;
+    border: 2px solid #931D1E;
+    border-radius: 20px;
+    margin-bottom: 2vh;
+    color: #931D1E;
+}
+
+
+div #info_section p{
+    font-size: 2.75vh;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    padding: 2vw;
+    margin: auto;
+
+}
+
+ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-inline-start: 0;
+}
+
+ul li{
+
+    margin-top: 0.75vh;
+    margin-bottom: 0.75vh;
+    border-bottom: 1px solid #931D1E;
+
+}
+
+ul li a{
+
+    text-decoration: none;
+    font-size: 2vh;
+}
+
+::-webkit-scrollbar{display:none}
+
+div #scroll_box
+{
+    width: 20vw;
+    height:20vh;
+    line-height:3em;
+    overflow:scroll;
+    padding:5px;
+    background-color:#ffffff;
+    color:#931D1E;
+    border:1px solid #931D1E; 
+    border-radius: 10px;
+    margin: 0;
+}
+
+
+
+
+ 

@@ -12,10 +12,18 @@ $creations = $statement->fetchAll();
 $statement->closeCursor();
 ?>
 <!-- the head section -->
- <div class="container">
+ 
+<div class="container">
+<div id="left_section">
 <?php
 include('includes/header.php');
 ?>
+
+<?php
+include('sideComp.php');
+?>
+
+            <div id="add_rec">
         <h1>Add Record</h1>
         <form action="add_record.php" method="post" enctype="multipart/form-data"
               id="add_record_form">
@@ -48,8 +56,9 @@ include('includes/header.php');
             <label>&nbsp;</label>
             <input type="submit" value="Add Record" href="index.php" >
             <br>
+
+            <p><a href="index.php">View Homepage</a></p>
         </form>
-        <p><a href="index.php">View Homepage</a></p>
-    <?php
-include('includes/footer.php');
-?>
+            </div>
+
+

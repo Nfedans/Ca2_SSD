@@ -11,9 +11,16 @@
 ?>
 <!-- the head section -->
 <div class="container">
+<div id="left_section">
+
 <?php
 include('includes/header.php');
 ?>
+
+<?php
+include('sideComp.php');
+?>
+<div id="cat_list">
     <h1>Category List</h1>
     <table>
         <tr>
@@ -46,6 +53,7 @@ include('includes/header.php');
     </form>
     <br>
     <p><a href="index.php">Homepage</a></p>
+        </div>
 
     <?php
 include('includes/footer.php');

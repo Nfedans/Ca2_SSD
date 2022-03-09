@@ -1,9 +1,17 @@
 <!-- the head section -->
 <head>
 <title>Online Origami Tutorials</title>
-<link rel="stylesheet" type="text/css" href="../styling/mainStyles.css">
+<link rel="stylesheet" type="text/css" href="./styling/mainStyles.css">
 </head>
 
 <!-- the body section -->
 <body>
-<header><h1>Origami Tutorial</h1></header>
+
+<header>
+    <img src="./image_uploads/539248.png" alt="Logo" id="logoImg">
+
+    <div id = optHolder>
+    <p><a href="add_record_form.php">Add Record</a></p>
+    <p><a href="category_list.php">Manage Creations</a></p>
+    </div>
+</header>

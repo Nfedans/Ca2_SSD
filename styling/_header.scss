@@ -1,13 +1,59 @@
 /* Header styles*/
 
 header {
+    display: flex;
+    justify-content:flex-start;
+    align-items: center;
     margin: 0;
-    border-bottom: 2px solid $black1;
+    border-bottom: 2px solid #931D1E;
+    background-color: rgb(236, 243, 253);
+    width: 40vw;
+    height: 15vh;
 }
+
+#logoImg{
+    width: 15vw;
+}
+
+div #optHolder{
+    display: flex;
+    justify-content: space-around;
+    align-self: flex-end;
+    width: 25vw;
+}
+
 header h1 {
     margin: 0;
     padding: .5em 0;
-    color: $blue1;
+    color: blue;
+}
+
+div #optHolder p a{
+    color: #ECF3FD;
+    background-color: #50B4C2;
+    font-style: none;
+    text-decoration: none;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    border: 1px solid #931D1E;
+    padding: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+    border-radius: 1vh;
+
+}
+
+div #optHolder p a:hover{
+    color: white;
+    background-color: #50B4C2;
+    font-style: none;
+    text-decoration: none;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    border: 2px solid #931D1E;
+    padding: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+    border-radius: 1vh;
+
 }
 
 // have atleast 2 nested yokes for the project

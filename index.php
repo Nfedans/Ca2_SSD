@@ -39,24 +39,16 @@ $records = $statement3->fetchAll();
 $statement3->closeCursor();
 ?>
 <div class="container">
+
+<div id="left_section">
 <?php
 include('includes/header.php');
 ?>
 
-<aside>
-<!-- display a list of categories -->
-<h2>Selection of creations</h2>
-<nav>
-<ul>
-<?php foreach ($creations as $creation) : ?>
-<li><a href=".?creation_id=<?php echo $creation['creationID']; ?>">
-<?php echo $creation['creationName']; ?>
-</a>
-</li>
-<?php endforeach; ?>
-</ul>
-</nav>          
-</aside>
+<?php
+include('sideComp.php');
+?>
+
 
 <section>
 <!-- display a table of records -->
@@ -95,9 +87,8 @@ value="<?php echo $record['creationID']; ?>">
 </tr>
 <?php endforeach; ?>
 </table>
-<p><a href="add_record_form.php">Add Record</a></p>
-<p><a href="category_list.php">Manage Creations</a></p>
 </section>
-<?php
-include('includes/footer.php');
-?>
+
+</div>
+
+
