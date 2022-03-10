@@ -1,0 +1,11 @@
+/*      Styling for Instructions table      */
+
+table{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    top: 15vh;
+    z-index: 0;
+    background-color: #50B4C2;
+}

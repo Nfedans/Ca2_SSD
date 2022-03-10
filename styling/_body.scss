@@ -4,7 +4,7 @@ body{
     margin: 0;
     padding: 0;
     color: #931D1E;
-    background-color: white;
+    background-color: 50B4C2;
     width: 100vw;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
@@ -20,16 +20,19 @@ div #left_section{
     position: fixed;
     height: 100vh;
     background-color: rgb(236, 243, 253);
-    border-right: 2px double #50B4C2;
+    //border-right: 2px solid #931D1E;
+    width: 20vw;
 }
 div #section_holder
 {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 1vh;
+    align-items: center;
     background-color: transparent;
     height: 85vh;
+    width: 20vw;
+    //border-right: 2px solid #931D1E;
 }
 
 aside{
@@ -37,11 +40,19 @@ aside{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: #ffffff;
-    width: 32vw;
+    background-color: #931D1E;
+    color: #ffffff;
+    width: 18vw;
     border: 2px solid #931D1E;
-    border-radius: 20px;
+    border-radius: 1.5vw;
     margin-top: 2vh;
+    
+}
+
+aside h2{
+    text-align: center;
+    padding-top: 1vw;
+    margin: 0;
 }
 
 div #info_section
@@ -50,19 +61,19 @@ div #info_section
     justify-content: center;
     align-items: center;
     text-align: center;
-    background-color: #ffffff;
-    width: 32vw;
+    background-color: #931D1E;
+    width: 18vw;
     border: 2px solid #931D1E;
-    border-radius: 20px;
+    border-radius: 1.5vw;
     margin-bottom: 2vh;
-    color: #931D1E;
+    color: #ffffff;
 }
 
 
 div #info_section p{
     font-size: 2.75vh;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    padding: 2vw;
+    padding: 1vw;
     margin: auto;
 
 }
@@ -85,38 +96,65 @@ ul li{
 ul li a{
 
     text-decoration: none;
-    font-size: 2vh;
+    font-size: 2.5vh;
+    color: black;
+    margin-left: 2vw;
+}
+
+ul li a:hover{
+
+    text-decoration: none;
+    font-size: 3vh;
+    color: #50B4C2;
+    margin-left: 2vw;
 }
 
 ::-webkit-scrollbar{display:none}
 
 div #scroll_box
 {
-    width: 20vw;
-    height:20vh;
+    width: 16vw;
+    height:35vh;
     line-height:3em;
     overflow:scroll;
-    padding:5px;
+   
     background-color:#ffffff;
     color:#931D1E;
     border:1px solid #931D1E; 
-    border-radius: 10px;
+    border-radius: 1vw;
     margin: 0;
 }
 
 
 section{
    
-    margin-left: 40vw;
-    width: 60vw;
-    background-color: black;
+    margin-left: 20vw;
+    width: 80vw;
+    min-height: 115vh;
     
 }
 
-section div #prodHead{
+#prodHead{
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 15vw;
-    background-color: black;
+    height: 15vh;
+    width: 80vw;
+    position: fixed;
+    z-index: 1;
+
+    //background-color: black;
+}
+
+#prodHead h2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 9vh;
+    width: 48vw;
+    border: 2px solid #931D1E;
+    color: #ffffff;
+    background-color: #931D1E;
+    border-radius: 1.5vw;
+    font-size: 5vh;
 }

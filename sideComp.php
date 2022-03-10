@@ -2,8 +2,7 @@
 
 <div id="info_section">
 
-<p>Welcome to Nikita's Origami Site! You'll find all kinds of magical creations
-   here, so get ready to whip out a piece of paper, crack your knuckles, and let's get Creatin'</p>
+<p>Welcome to Nikita's Origami Site! Let's make something cool!</p>
 
 </div>
 

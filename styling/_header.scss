@@ -2,12 +2,12 @@
 
 header {
     display: flex;
-    justify-content:flex-start;
+    justify-content:center;
     align-items: center;
     margin: 0;
     border-bottom: 2px solid #931D1E;
     background-color: rgb(236, 243, 253);
-    width: 40vw;
+    width: 18vw;
     height: 15vh;
 }
 
@@ -18,8 +18,8 @@ header {
 div #optHolder{
     display: flex;
     justify-content: space-around;
-    align-self: flex-end;
-    width: 25vw;
+    width: 18vw;
+    border-bottom: 2px solid #931D1E;
 }
 
 header h1 {
@@ -29,15 +29,15 @@ header h1 {
 }
 
 div #optHolder p a{
-    color: #ECF3FD;
+    color: white;
     background-color: #50B4C2;
     font-style: none;
     text-decoration: none;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     border: 1px solid #931D1E;
     padding: 5px;
-    padding-left: 15px;
-    padding-right: 15px;
+    padding-left: 0.5vw;
+    padding-right: 0.5vw;
     border-radius: 1vh;
 
 }
@@ -50,8 +50,8 @@ div #optHolder p a:hover{
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     border: 2px solid #931D1E;
     padding: 5px;
-    padding-left: 15px;
-    padding-right: 15px;
+    padding-left: 0.5vw;
+    padding-right: 0.5vw;
     border-radius: 1vh;
 
 }
