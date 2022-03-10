@@ -129,11 +129,6 @@ div #section_holder {
   height: 85vh;
 }
 
-section {
-  margin-left: 40vw;
-  width: 60vw;
-}
-
 aside {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -221,6 +216,11 @@ div #scroll_box {
   border: 1px solid #931D1E;
   border-radius: 10px;
   margin: 0;
+}
+
+section {
+  margin-left: 40vw;
+  width: 60vw;
 }
 
 /* variables*/
