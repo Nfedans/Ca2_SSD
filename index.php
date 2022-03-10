@@ -52,7 +52,10 @@ include('sideComp.php');
 
 <section>
 <!-- display a table of records -->
+<div id="prodHead">
 <h2><?php echo $creation_name; ?></h2>
+</div>
+
 <table>
 <tr>
 <th>Image</th>
