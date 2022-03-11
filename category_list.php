@@ -21,11 +21,14 @@ include('includes/header.php');
 include('sideComp.php');
 ?>
 <div id="cat_list">
-    <h1>Category List</h1>
+        <div id="prodHead">
+        <h2>Manage Creations</h2>
+        </div>
+        <div id="catCont">
     <table>
         <tr>
             <th>Name</th>
-            <th>&nbsp;</th>
+            <th>Option</th>
         </tr>
         <?php foreach ($creations as $creation) : ?>
         <tr>
@@ -43,18 +46,17 @@ include('sideComp.php');
     </table>
     <br>
 
-    <h2>Add Category</h2>
+   
     <form action="add_category.php" method="post"
           id="add_category_form">
-
+          <h2>Add Category</h2>
+        <div>
         <label>Name:</label>
-        <input type="input" name="name">
-        <input id="add_category_button" type="submit" value="Add">
+        <input type="input" name="name" required>
+        <input id="add_category_button" type="submit" value="Add" >
+        </div>
     </form>
     <br>
     <p><a href="index.php">Homepage</a></p>
         </div>
-
-    <?php
-include('includes/footer.php');
-?>
+        </div>

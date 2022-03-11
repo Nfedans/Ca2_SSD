@@ -43,9 +43,9 @@ $statement3->closeCursor();
 $record_id = filter_input(INPUT_POST, 'record_id', FILTER_VALIDATE_INT);
 $query = 'SELECT *
           FROM records
-          WHERE creationID = :creation_id';
+          WHERE recordID = :record_id';
 $statement = $db->prepare($query);
-$statement->bindValue(':creation_id', $creation_id);
+$statement->bindValue(':record_id', $record_id);
 $statement->execute();
 $crtns = $statement->fetch(PDO::FETCH_ASSOC);
 $statement->closeCursor();
@@ -65,11 +65,14 @@ include('sideComp.php');
 
 
 
-<div id="edit_form">
-        <h1>Edit Product</h1>
+<div id="add_rec">
+
+<div id="prodHead">
+        <h2>Edit Record</h2>
+        </div>
 
         
-
+        <div id="formCont">
         <form action="edit_record.php" method="post" enctype="multipart/form-data"
               id="add_record_form">
             <input type="hidden" name="original_image" value="<?php echo $crtns['image']; ?>" />
@@ -77,35 +80,37 @@ include('sideComp.php');
                    value="<?php echo $crtns['recordID']; ?>">
 
             <label>creation ID:</label>
-            <input type="creation_id" name="creation_id"
+            <input type="creation_id" name="creation_id"  placeholder="previous ID = <?php echo $crtns['creationID']; ?>"
                    value="<?php echo $crtns['creationID']; ?>">
-            <br>
+          
 
             <label>Name:</label>
-            <input type="input" name="name"
-                   value="<?php echo $crtns['name']; ?>">
-            <br>
+            <input type="input" name="name" placeholder="previous name = <?php echo $crtns['name']; ?>"
+                   value="<?php echo $crtns['name']; ?>" required>
+           
 
             <label>Description:</label>
-            <input type="input" name="description"
-                   value="<?php echo $crtns['description']; ?>">
-            <br>
+            <input type="input" name="description" placeholder="previous description = <?php echo $crtns['description']; ?>"
+                   value="<?php echo $crtns['description']; ?>" required>
+          
 
             <label>Difficulty:</label>
-            <input type="input" name="difficulty"
-                   value="<?php echo $crtns['difficulty']; ?>">
-            <br>
+            <input type="input" name="difficulty" placeholder="[0 - 5] (previously = <?php echo $crtns['difficulty']; ?>)"
+                   value="<?php echo $crtns['difficulty']; ?>" pattern="[0-5]">
+           
 
             <label>Image:</label>
             <input type="file" name="image" accept="image/*" />
-            <br>            
+                    
             <?php if ($crtns['image'] != "") { ?>
             <p><img src="image_uploads/<?php echo $crtns['image']; ?>" height="150" /></p>
             <?php } ?>
             
             <label>&nbsp;</label>
             <input type="submit" value="Save Changes">
-            <br>
+         
+            <p><a href="index.php">View Homepage</a></p>
         </form>
-        <p><a href="index.php">View Homepage</a></p>
+        
+            </div>
             </div>

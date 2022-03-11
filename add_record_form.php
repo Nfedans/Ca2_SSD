@@ -1,5 +1,5 @@
 <?php
-//header('Location: ' . 'http://localhost/Ca2_SSD/index.php', true, 303);
+
 //exit;
 require('database.php');
 
@@ -15,6 +15,9 @@ $statement->closeCursor();
  
 <div class="container">
 <div id="left_section">
+
+
+
 <?php
 include('includes/header.php');
 ?>
@@ -24,7 +27,12 @@ include('sideComp.php');
 ?>
 
             <div id="add_rec">
-        <h1>Add Record</h1>
+       
+        <div id="prodHead">
+        <h2>Add Record</h2>
+        </div>
+
+        <div id="formCont">
         <form action="add_record.php" method="post" enctype="multipart/form-data"
               id="add_record_form">
 
@@ -36,29 +44,30 @@ include('sideComp.php');
                 </option>
             <?php endforeach; ?>
             </select>
-            <br>
+        
             <label>Name:</label>
             <input type="input" name="name" required>
-            <br>
+    
 
             <label>Description:</label>
-            <input type="input" name="description" placeholder="Thorough explaination here...">
-            <br>       
+            <input type="input" name="description" placeholder="Thorough explaination here..." required>
+             
 
             <label>Difficulty:</label>
-            <input type="input" name="difficulty" placeholder="0 - 5" pattern="[0-5]">
-            <br>        
+            <input type="input" name="difficulty" placeholder="[0 - 5]" pattern="[0-5]">
+               
             
             <label>Image:</label>
             <input type="file" name="image" accept="image/*" />
-            <br>
+         
             
             <label>&nbsp;</label>
             <input type="submit" value="Add Record" href="index.php" >
-            <br>
 
             <p><a href="index.php">View Homepage</a></p>
         </form>
             </div>
+            </div>
 
 
+           

@@ -77,6 +77,11 @@ if ($creation_id == null || $creation_id == false ||
     $statement->closeCursor();
 
     // Display the Product List page
+   
+    header("Location: index.php");
     include('index.php');
+    
 
 }
+
+

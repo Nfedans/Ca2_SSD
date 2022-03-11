@@ -3,5 +3,103 @@
 div #cat_list
 
 {
-    margin-left: 25vw;
+    display: flex;
+    justify-content: center;
+    margin-left: 20vw;
+    width: 80vw;
+    table{
+        margin-top: 6vh;
+        width: 46vw;
+        tr{ 
+            width: 46vw;
+            display: flex;
+            align-items: space-between;
+            justify-content: space-between;
+            height: 8vh;
+            font-size: 2.5vh;
+        }
+        tr:first-child{
+            height: 6vh;
+            background-color: #931D1E;
+            color: rgb(236, 243, 253);
+            font-size: 3vh;
+        }
+    }
+    #add_category_form
+    {
+        h2{
+            display: flex;
+            justify-content: center;
+            margin: 0;
+            margin-bottom: 0.5vh;
+            padding-bottom: 0.5vh;
+            width: 46vw;
+            color: rgb(236, 243, 253);
+            background-color: #931D1E;
+            border-top: 2px solid #931D1E;
+            border-top: 1vh;
+            font-size: 3.5vh;
+        }
+        label
+        {
+            font-size: 2.5vh;
+        }
+        div
+        {
+            display: flex;
+            justify-content: space-between;
+            width: 40vw;
+            height: 4vh;
+            margin-top: .4vh;
+        }
+        input
+        {
+            width: 24vw;
+            border: 1px solid #931D1E;
+            border-radius: 1vh;
+        }
+        #add_category_button
+            {
+                width: 4vw;
+                color: rgb(236, 243, 253);
+                background-color: #931D1E;
+            }
+        #add_category_button:hover
+        {
+            width: 4vw;
+            color: rgb(236, 243, 253);
+            background-color: #00bb54;
+        }
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: rgb(236, 243, 253);
+        margin-top: 15vh;
+        width: 44vw;
+        height: 8vh;
+        padding-top: 0;
+        padding-left: 1vw;
+        padding-right: 1vw;
+        padding-bottom: 1vw;
+        border: 2px solid #931D1E;
+        border-radius: 1vh;
+    }
+    p
+    {
+        display: flex;
+        justify-content: center;
+        a{
+            text-decoration: none;
+            font-size: 3vh;
+            color: rgb(236, 243, 253);
+        }
+        a:hover{
+            text-decoration: underline;
+            font-size: 3vh;
+            color: rgb(236, 243, 253);
+        }
+        
+    }
+    
 }
+

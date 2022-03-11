@@ -4,8 +4,125 @@ table{
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     position: relative;
     top: 15vh;
     z-index: 0;
     background-color: #50B4C2;
+    width: 70vw;
+    margin-top: 1vh;
+    margin-bottom: 5vh;
+    color: #931D1E;
+    font-size: 2.2vh;
 }
+
+table tbody{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+  
+  
+}
+
+th,
+table td img,
+table td,
+table tr td
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 11vw;
+    padding: 0.6vh;
+}
+
+table td form input 
+{
+    
+    padding: 1vh;
+    border: 1px solid rgb(236, 243, 253);
+    border-radius: 1vh;
+    background-color: #931D1E;
+    color: rgb(236, 243, 253);
+    height: 5vh;
+    width: 8vw;
+    //background-color: #aeb07b;
+}
+
+table td form input:hover
+{
+    padding: 1.2vh;
+    border: 2px solid rgb(236, 243, 253);
+    border-radius: 1vh;
+    background-color: #931D1E;
+    color: rgb(236, 243, 253);
+    //background-color: #aeb07b;
+}
+
+
+table tr{
+    display: flex;
+    border-bottom: 2px solid #50B4C2;
+    background-color:rgb(236, 243, 253);
+    opacity: 90%;
+    margin-top: 0.25vh;
+    margin-bottom: 0.25vh;
+    border-radius: 1vh;
+    border: 2px solid #931D1E;
+}
+
+table tr:hover{
+    display: flex;
+    border-bottom: 2px solid #50B4C2;
+    background-color:rgb(236, 243, 253);
+    margin-top: 0.25vh;
+    opacity: 100%;
+    margin-bottom: 0.25vh;
+    border: 2px solid #931D1E;
+
+}
+table tr th{
+    display: flex;
+    align-items: space-between;
+   
+}
+
+#tr_top
+{
+    margin-bottom:5vh;
+    border: 0;
+    border-radius: 1vh;
+    border-bottom: 2px solid #931D1E;
+    border-top: 2px solid #931D1E;
+    color: rgb(236, 243, 253);
+    background-color: #931D1E;
+    
+
+
+}
+
+table td form
+{
+margin-top: 1vh;
+margin-bottom: 1vh;
+    
+}
+
+table td img
+{
+width: 9vw;
+height: 9vw;
+    
+}
+
+/*div #content_holder
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    top: 15vh;
+    z-index: 0;
+}*/

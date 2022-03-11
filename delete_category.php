@@ -1,9 +1,9 @@
 <?php
 // Get ID
-$category_id = filter_input(INPUT_POST, 'creation_id', FILTER_VALIDATE_INT);
+$creation_id = filter_input(INPUT_POST, 'creation_id', FILTER_VALIDATE_INT);
 
 // Validate inputs
-if ($category_id == null || $category_id == false) {
+if ($creation_id == null || $creation_id == false) {
     $error = "Invalid creation ID.";
     include('error.php');
 } else {
