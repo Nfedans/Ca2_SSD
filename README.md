@@ -3,7 +3,8 @@
 
 # Nikita's Origami website
 
-![demo of site](https://giphy.com/gifs/6TPUUmUVA7ENclHzS6.gif)
+![site_demo](https://user-images.githubusercontent.com/94120511/158021409-ac95304d-ce6d-408b-ac94-e3487b12e819.gif)
+
 
 This is my Origami Instruction website. It is a PHP CRUD site.
 ### Instructions to run locally
